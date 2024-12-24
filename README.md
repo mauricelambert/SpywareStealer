@@ -4,7 +4,7 @@
 
 ## Description
 
-This browser extension implements a spyware and a stealer to exfiltrate data from all user interactions (keylogger and form data stealer) and work on Chrome and Firefox.
+This browser extension implements a spyware and a stealer to exfiltrate data from all user interactions (keylogger and form data stealer), it works on Chrome and Firefox.
 
 > It's very useful to test your browser protection, like many EDR have or other tools.
 
